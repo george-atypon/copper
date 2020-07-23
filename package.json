@@ -1,5 +1,5 @@
 {
-  "name": "canvas-monorepo",
+  "name": "design-system-monorepo",
   "private": true,
   "workspaces": {
     "packages": [

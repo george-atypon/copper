@@ -1,10 +1,19 @@
-import React, { FunctionComponent, Children } from 'react';
-// import { Props } from './props';
+import React, { FunctionComponent } from 'react';
+import classnames from 'classnames';
 import './button.scss';
 
-export const Button: FunctionComponent = (props) => {
+interface Props {
+  className?: string;
+}
+
+export const Button: FunctionComponent<Props> = ({ className, children }) => {
+  const classes = classnames(
+    className,
+    'button'
+  );
+
   return (
-    <button className="button">{props.children}</button>
+    <button className={classes}>{children}</button>
   );
 };
 
